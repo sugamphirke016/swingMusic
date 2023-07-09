@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/home_icon"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/nav_library"
+        android:icon="@drawable/library_icon"
+        android:title="Library"/>
+
+    <item
+        android:id="@+id/nav_account"
+        android:icon="@drawable/account_icon"
+        android:title="Account"/>
+
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/setting_icon"
+        android:title="Settings"/>
+
+    <item
+        android:id="@+id/nav_aboutus"
+        android:icon="@drawable/about_us_icon"
+        android:title="About Us"/>
+
+    <item android:title="Profile">
+        <menu>
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/exit"
+                android:title="Log Out" />
+        </menu>
+    </item>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/share_icon"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_rateus"
+                android:icon="@drawable/rateus_icon"
+                android:title="Rate Us" />
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@drawable/feedback_icon"
+                android:title="Feedback" />
+        </menu>
+    </item>
+
+</menu>

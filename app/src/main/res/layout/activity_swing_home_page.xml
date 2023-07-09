@@ -1,0 +1,1668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_lay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/home_scr">
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/tool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:backgroundTint="@color/black"
+
+                app:navigationIcon="@drawable/ic_baseline_menu_open_24"
+                app:navigationIconTint="@color/white"
+                app:titleTextColor="@color/purple_200"
+                android:elevation="6dp"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Swing"
+                    android:textSize="30sp"
+                    android:fontFamily="cursive"
+                    android:textColor="@color/purple_200"
+                    android:layout_marginLeft="110dp"
+                    android:textStyle="bold"/>
+
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigator"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="?android:attr/windowBackground"
+            app:backgroundTint="@color/black"
+            app:itemIconTint="@drawable/selector"
+            app:itemTextColor="@drawable/selector"
+            app:labelVisibilityMode="selected"
+            app:menu="@menu/bottom_nav_menu" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.home.HomeFragment"
+            android:orientation="vertical"
+            android:background="@drawable/library_scrn_gradient"
+            android:layout_above="@id/bottom_navigator"
+            android:layout_below="@+id/tool">
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="7dp"
+                        android:fontFamily="@font/amaranth_bold"
+                        android:text="@string/artists_for_you"
+                        android:textColor="#00BCD4"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbarSize="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/arijit_singh_layout"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="7dp"
+                                    android:orientation="vertical">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="110dp"
+                                        android:layout_height="110dp"
+                                        android:src="@drawable/arijit"
+                                        app:civ_border_color="@color/bg_logo"
+                                        app:civ_border_width="2dp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/arijit_singh"
+                                        android:textColor="#FFFFFF"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:id="@+id/zyan_layout"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="7dp"
+                                    android:orientation="vertical">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="110dp"
+                                        android:layout_height="110dp"
+                                        android:src="@drawable/zayn_round"
+                                        app:civ_border_color="@color/bg_logo"
+                                        app:civ_border_width="2dp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/zyan_malik"
+                                        android:textColor="#FFFFFF"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="7dp"
+                                    android:orientation="vertical">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="110dp"
+                                        android:layout_height="110dp"
+                                        android:src="@drawable/taylor_round"
+                                        app:civ_border_color="@color/bg_logo"
+                                        app:civ_border_width="2dp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/taylor_swift"
+                                        android:textColor="#FFFFFF"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="7dp"
+                                    android:orientation="vertical">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="110dp"
+                                        android:layout_height="110dp"
+                                        android:src="@drawable/shreya_round"
+                                        app:civ_border_color="@color/bg_logo"
+                                        app:civ_border_width="2dp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/shreya_ghoshal"
+                                        android:textColor="#FFFFFF"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="7dp"
+                                    android:orientation="vertical">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="110dp"
+                                        android:layout_height="110dp"
+                                        android:src="@drawable/ed_round"
+                                        app:civ_border_color="@color/bg_logo"
+                                        app:civ_border_width="2dp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/ed_sheeran"
+                                        android:textColor="#FFFFFF"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="7dp"
+                                    android:orientation="vertical">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="110dp"
+                                        android:layout_height="110dp"
+                                        android:src="@drawable/armaan_round"
+                                        app:civ_border_color="@color/bg_logo"
+                                        app:civ_border_width="2dp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/armaan_malik"
+                                        android:textColor="#FFFFFF"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="7dp"
+                                    android:orientation="vertical">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="110dp"
+                                        android:layout_height="110dp"
+                                        android:src="@drawable/selena_round"
+                                        app:civ_border_color="@color/bg_logo"
+                                        app:civ_border_width="2dp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/selena_gomez"
+                                        android:textColor="#FFFFFF"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="7dp"
+                                    android:orientation="vertical">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="110dp"
+                                        android:layout_height="110dp"
+                                        android:src="@drawable/atif_round"
+                                        app:civ_border_color="@color/bg_logo"
+                                        app:civ_border_width="2dp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/atif_aslam"
+                                        android:textColor="#FFFFFF"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="7dp"
+                                    android:orientation="vertical">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="110dp"
+                                        android:layout_height="110dp"
+                                        android:src="@drawable/justin_round"
+                                        app:civ_border_color="@color/bg_logo"
+                                        app:civ_border_width="2dp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/justin_bieber"
+                                        android:textColor="#FFFFFF"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="7dp"
+                                    android:orientation="vertical">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="110dp"
+                                        android:layout_height="110dp"
+                                        android:src="@drawable/bruno_round"
+                                        app:civ_border_color="@color/bg_logo"
+                                        app:civ_border_width="2dp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/bruno_mars"
+                                        android:textColor="#FFFFFF"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="7dp"
+                                    android:orientation="vertical">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="110dp"
+                                        android:layout_height="110dp"
+                                        android:src="@drawable/dua_round"
+                                        app:civ_border_color="@color/bg_logo"
+                                        app:civ_border_width="2dp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/dua_lipa"
+                                        android:textColor="#FFFFFF"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="7dp"
+                                    android:orientation="vertical">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="110dp"
+                                        android:layout_height="110dp"
+                                        android:src="@drawable/weeknd_round"
+                                        app:civ_border_color="@color/bg_logo"
+                                        app:civ_border_width="2dp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/the_weeknd"
+                                        android:textColor="#FFFFFF"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="7dp"
+                                    android:orientation="vertical">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="110dp"
+                                        android:layout_height="110dp"
+                                        android:src="@drawable/kishor_round"
+                                        app:civ_border_color="@color/bg_logo"
+                                        app:civ_border_width="2dp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/kishor_kumar"
+                                        android:textColor="#FFFFFF"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="7dp"
+                                    android:orientation="vertical">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="110dp"
+                                        android:layout_height="110dp"
+                                        android:src="@drawable/drake_round"
+                                        app:civ_border_color="@color/bg_logo"
+                                        app:civ_border_width="2dp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/drake"
+                                        android:textColor="#FFFFFF"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="7dp"
+                                    android:orientation="vertical">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="110dp"
+                                        android:layout_height="110dp"
+                                        android:src="@drawable/ariana_round"
+                                        app:civ_border_color="@color/bg_logo"
+                                        app:civ_border_width="2dp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/ariana_grande"
+                                        android:textColor="#FFFFFF"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </HorizontalScrollView>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_weight="0"
+                        android:background="#FFFFFF" />
+
+                    <ViewFlipper
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="20dp"
+                        android:flipInterval="2000"
+                        android:autoStart="true"
+                        android:inAnimation="@android:anim/slide_in_left"
+                        android:outAnimation="@android:anim/slide_out_right">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/img5_slider"/>
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/img1_slider"/>
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/img2_slider"/>
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/img3_slider"/>
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/img4_slider"/>
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/img6_slider"/>
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/img"/>
+
+                    </ViewFlipper>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="7dp"
+                        android:fontFamily="@font/baloo_bhai"
+                        android:text="@string/international_top_hits"
+                        android:textColor="#00BCD4"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbarSize="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:orientation="horizontal" >
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:background="@drawable/album_gradient"
+                                        android:src="@drawable/stay_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="@string/stay"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="@string/justin_bieber2"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:background="@drawable/album_gradient"
+                                        android:src="@drawable/blinding_lights_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="@string/blinding_lights"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="@string/the_weeknd2"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:background="@drawable/album_gradient"
+                                        android:src="@drawable/circles_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="@string/circles"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="@string/post_malone"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+
+                                        android:src="@drawable/badhabits_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="@string/bad_habits"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="@string/ed_sheeran2"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:background="@drawable/album_gradient"
+                                        android:src="@drawable/good4u_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="Good 4 U"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="@string/olivia_rodrigo"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:background="@drawable/album_gradient"
+                                        android:src="@drawable/levitating_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="@string/levitating"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="@string/dua_lipa2"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:background="@drawable/album_gradient"
+                                        android:src="@drawable/memories_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="@string/memories"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="@string/maroon_5"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </HorizontalScrollView>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="7dp"
+                        android:fontFamily="@font/baloo_bhai"
+                        android:text="All Time Favourites"
+                        android:textColor="#00BCD4"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbarSize="0dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:orientation="horizontal" >
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:src="@drawable/lovemelikeudo_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="Love Me Like..."
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="Ellie Glouding"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:src="@drawable/loveurself_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="@string/love_your_self"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="@string/justin_bieber"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:src="@drawable/wolves_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="@string/wolves"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="@string/selena_gomez"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+
+                                        android:src="@drawable/starboy_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="@string/star_boy"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="@string/the_weeknd"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:src="@drawable/uptown_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="@string/uptown_funk"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="Bruno Mars"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+
+                                        android:src="@drawable/something_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="@string/something_just"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="@string/chainsmokers_coldplay"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:src="@drawable/believer_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="@string/believer"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="@string/imagine_dragons"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:src="@drawable/havana_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="@string/havana"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="@string/camila_cabello"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:src="@drawable/sugar_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="@string/sugar"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="@string/maroon_5"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </HorizontalScrollView>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="7dp"
+                        android:fontFamily="@font/baloo_bhai"
+                        android:text="@string/best_hindi_picks"
+                        android:textColor="#00BCD4"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbarSize="0dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:orientation="horizontal" >
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:src="@drawable/nayan_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="Nayan"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="Dhvani Bhanushali"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:src="@drawable/palpal_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="Pal Pal Dil ke..."
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="Arijit Singh"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:src="@drawable/tuzhekitna_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="Tuzhe Kitna..."
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="Arijit Singh"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:src="@drawable/thodijagah_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="Thodi Jagah"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="Arijit Singh"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:src="@drawable/lutgaye_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="Lut Gaye"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="Jubin Nautiyal"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+
+                                        android:src="@drawable/terayaar_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="Tera Yaar Ho..."
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="Arijit Singh"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:src="@drawable/raatan_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="Raatan Lambiyan"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="Jubin Nautiyal"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:src="@drawable/vaaste_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="Vaaste"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="Dhvani Bhanushali"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:src="@drawable/sanamre_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="Sanam Re"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="Arijit Singh"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:src="@drawable/tumhiho_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="Tum Hi Ho"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="Arijit Singh"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </HorizontalScrollView>
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="7dp"
+                        android:fontFamily="@font/baloo_bhai"
+                        android:text="Top Hits Punjabi"
+                        android:textColor="#00BCD4"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbarSize="0dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:orientation="horizontal" >
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:src="@drawable/excuses_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="Excuses"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="A P Dhillon"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:src="@drawable/kudiyan_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="Kudiyan Lahor..."
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="Harrdy Sandhu"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:src="@drawable/prada_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="Prada"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="Jass Manak"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:src="@drawable/lahore_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="Lahore"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="Guru Randhawa"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:src="@drawable/brwonmunde_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="Brown Munde"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="A P Dhillon"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+
+                                        android:src="@drawable/uddgaya_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="Udd Gaya"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="B Praak"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:src="@drawable/highrated_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="HighRated Ga..."
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="Guru Randhawa"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:src="@drawable/lehanga_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="Lehanga"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="Jass Manak"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="7dp"
+                                    android:layout_marginRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:src="@drawable/panidigal_song" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_weight="1"
+                                        android:text="Pani Di Gal"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:text="Maninder Buttar"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </HorizontalScrollView>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/ver_nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/vertical_nav_menu"
+        android:layout_gravity="start"/>
+</androidx.drawerlayout.widget.DrawerLayout>
+

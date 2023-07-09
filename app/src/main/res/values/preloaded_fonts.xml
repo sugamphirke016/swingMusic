@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/allura</item>
+        <item>@font/balsamiq_sans_bold</item>
+        <item>@font/bungee</item>
+        <item>@font/merienda_one</item>
+        <item>@font/muli_black</item>
+    </array>
+</resources>

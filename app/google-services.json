@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "344045373355",
+    "firebase_url": "https://swing-music-94f4e-default-rtdb.firebaseio.com",
+    "project_id": "swing-music-94f4e",
+    "storage_bucket": "swing-music-94f4e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:344045373355:android:99e0f00597268fc5cdf4ee",
+        "android_client_info": {
+          "package_name": "com.example.swingmusic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "344045373355-otgut7sdtanrc8mg61aj1int5ddckl3h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrQP1L0weVELad1sENhABQO6IKRCTjttE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "344045373355-otgut7sdtanrc8mg61aj1int5ddckl3h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
